@@ -5,7 +5,7 @@ const Navbar = () => {
   const items = [
     {
       label: "About",
-      bgColor: "#0D0716",
+      bgColor: "#d5bdaf",
       textColor: "#fff",
       links: [
         { label: "Company", ariaLabel: "About Company" },
@@ -14,7 +14,7 @@ const Navbar = () => {
     },
     {
       label: "Projects", 
-      bgColor: "#170D27",
+      bgColor: "#e3d5ca",
       textColor: "#fff",
       links: [
         { label: "Featured", ariaLabel: "Featured Projects" },
@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       label: "Contact",
-      bgColor: "#271E37", 
+      bgColor: "#d6ccc2", 
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email us" },
