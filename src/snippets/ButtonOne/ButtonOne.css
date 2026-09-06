@@ -1,0 +1,61 @@
+.button-one {
+  position: relative;
+  overflow: hidden;
+  width: 10.5rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+}
+
+.button-one__label,
+.button-one__hover-label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.button-one__hover-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate(3rem, -50%);
+  opacity: 0;
+}
+
+.button-one__background {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: currentColor;
+  transform: scale(1);
+  transition: all 300ms ease;
+}
+
+.button-one:hover .button-one__label {
+  transform: translateX(3rem);
+  opacity: 0;
+}
+
+.button-one:hover .button-one__hover-label {
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+.button-one:hover .button-one__background {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.8);
+}

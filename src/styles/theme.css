@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+
+:root {
+  --color-background: #f5ebe0;
+  --color-surface: #ffffff;
+  --color-surface-muted: #e3d5ca;
+  --color-primary: #d5bdaf;
+  --color-primary-muted: #d6ccc2;
+  --color-text: #323232;
+  --color-text-muted: #888888;
+  --color-text-on-primary: #ffffff;
+  --color-border: rgba(50, 50, 50, 0.12);
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  --font-family-base: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-display: "Nunito", sans-serif;
+  --font-family-description: "Lora", serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --shadow-sm: 0 4px 6px var(--color-shadow);
+}
+
+.text-primary {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-on-primary {
+  color: var(--color-text-on-primary);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-default {
+  border: 1px solid var(--color-border);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}

@@ -1,0 +1,19 @@
+.hero-row {
+  padding-top: 20%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+
+.image-container-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
