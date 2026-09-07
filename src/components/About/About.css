@@ -1,0 +1,42 @@
+.about-page {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10rem 2rem 4rem;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+}
+
+.about-page__content {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-page h1 {
+  margin: 0 0 1rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+}
+
+.about-page p {
+  margin: 0 0 2rem;
+  font-family: var(--font-family-description);
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+.about-page__back {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.about-page__back:hover {
+  color: var(--color-primary);
+}

@@ -62,22 +62,25 @@ export default function HeroPage() {
 
 			<div className="hero-page__columns">
 				<div className="hero-page__column hero-page__actions">
-					<ButtonOne text="About me" onClick={() => { window.location.hash = "about"; }} />
+					<ButtonOne text="About me" onClick={() => { window.location.hash = "#about"; }} />
 					<ButtonOne text="Projects" onClick={() => { window.location.hash = "projects"; }} />
 				</div>
 
 				<div className="hero-page__column">
-					<h2>Thoughtful design</h2>
-					<p className="description">
-						I ensure that every interaction is intuitive and every design is purposeful.
+					<h2>Stacks</h2>
+					<p>
+                        Java ✦ C# ✦ Python ✦ Java Script ✦ MySQL ✦ Bootstrap ✦ PostgreSQL ✦ Angular ✦ Typescript ✦ HTML ✦ CSS ✦ Flutter ✦ BloC framework ✦ ECL ✦ Dart
 					</p>
 				</div>
 
 				<div className="hero-page__column">
-					<h2>Happy users</h2>
-					<p className="description">
-						My goal is to create experiences that satisfy both the user and the business.
+					<h2>Education</h2>
+					<p className="hero-page__column_title">
+						Kennesaw State University 
 					</p>
+					<p className="hero-page__education-details">
+                        B.S. in Computer Science ✦ TBD
+                    </p>
 				</div>
 			</div>
            

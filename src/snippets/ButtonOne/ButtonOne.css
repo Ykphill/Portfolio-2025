@@ -6,7 +6,7 @@
   border: 1px solid currentColor;
   border-radius: 999px;
   background: transparent;
-  color: inherit;
+  color: var(--color-text-secondary);
   cursor: pointer;
   font: inherit;
   font-weight: 600;
@@ -28,6 +28,7 @@
   top: 50%;
   transform: translate(3rem, -50%);
   opacity: 0;
+  color: var(--color-text-on-primary);
 }
 
 .button-one__background {

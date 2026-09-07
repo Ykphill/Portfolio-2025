@@ -8,8 +8,8 @@ const Navbar = () => {
       bgColor: "#d5bdaf",
       textColor: "#fff",
       links: [
-        { label: "Company", ariaLabel: "About Company" },
-        { label: "Careers", ariaLabel: "About Careers" }
+        { label: "Company", ariaLabel: "About Company", href: "#company" },
+        { label: "Careers", ariaLabel: "About Careers", href: "#careers" }
       ]
     },
     {
@@ -17,8 +17,8 @@ const Navbar = () => {
       bgColor: "#e3d5ca",
       textColor: "#fff",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects" },
-        { label: "Case Studies", ariaLabel: "Project Case Studies" }
+        { label: "Featured", ariaLabel: "Featured Projects", href: "#featured" },
+        { label: "Case Studies", ariaLabel: "Project Case Studies", href: "#case-studies" }
       ]
     },
     {
@@ -26,9 +26,9 @@ const Navbar = () => {
       bgColor: "#d6ccc2", 
       textColor: "#fff",
       links: [
-        { label: "Email", ariaLabel: "Email us" },
-        { label: "Twitter", ariaLabel: "Twitter" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn" }
+        { label: "Email", ariaLabel: "Email us", href: "#email" },
+        { label: "Twitter", ariaLabel: "Twitter", href: "#twitter" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "#linkedin" }
       ]
     }
   ];

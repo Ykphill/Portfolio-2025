@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 	align-items: stretch;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 .hero-page__content {
@@ -44,7 +44,8 @@
 }
 .hero-page__bottom {
 	grid-column: 1 / -1;
-	width: 30%;
+	width: 40%;
+ 
 	padding: .5rem 0;
 	justify-self: start;
 	align-self: start;
@@ -53,7 +54,7 @@
 .hero-page__bottom p {
 	font-family: var(--font-family-description);
 	text-align: left;
-	font-size: 1.4rem;
+	font-size: 2rem;
 	color: var(--color-text-muted);
 }
 
@@ -62,13 +63,34 @@
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 2rem;
-	width: 100%;
+	width: 95%;
 }
 
 .hero-page__column {
 	min-width: 0;
 }
+.hero-page__column h2 {
+	margin: 0;
+	font-family: var(--font-family-display);
+    color: var(--color-text-secondary-muted);
+	text-align: left;
+    font-size: 1.25rem;
+}
+.hero-page__column p {
+	margin: 0;
+	width: 100%;
+	font-family: var(--font-family-display);
+	text-align: center;
+    font-size: 1.0rem;
+}
+.hero-page__column p.hero-page__column_title {
+	text-align: left;
+	font-weight: 700;
+}
 
+.hero-page__column p.hero-page__education-details {
+	text-align: left;
+}
 .hero-page__actions {
 	display: flex;
 	flex-direction: row;
@@ -76,13 +98,10 @@
 	gap: 0.75rem;
 }
 
-.hero-page__columns h2,
 .hero-page__columns .description {
+	margin-top: 0.75rem;
 	font-family: var(--font-family-description);
 	text-align: left;
-}
-
-.hero-page__columns .description {
 	font-size: 1.4rem;
 	color: var(--color-text-muted);
 }

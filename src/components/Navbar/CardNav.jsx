@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from "react-icons/go";
@@ -119,6 +119,17 @@ const CardNav = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExpanded]);
 
+  useEffect(() => {
+    const handlePageChange = () => {
+      setIsHamburgerOpen(false);
+      setIsExpanded(false);
+      tlRef.current?.reverse();
+    };
+
+    window.addEventListener("hashchange", handlePageChange);
+    return () => window.removeEventListener("hashchange", handlePageChange);
+  }, []);
+
   const toggleMenu = () => {
     const tl = tlRef.current;
     if (!tl) return;
@@ -135,6 +146,10 @@ const CardNav = ({
 
   const setCardRef = (i) => (el) => {
     if (el) cardsRef.current[i] = el;
+  };
+
+  const navigateToCard = (label) => {
+    window.location.hash = `#${label.toLowerCase()}`;
   };
 
   return (
@@ -157,7 +172,14 @@ const CardNav = ({
             <div className="hamburger-line" />
           </div>
 
-          <div className="logo-container">
+          <div
+            className="logo-container"
+            onClick={() => { window.location.hash = "#home"; }}
+           
+            role="link"
+            tabIndex={0}
+            aria-label="Go to home"
+          >
             <img src={logo} alt={logoAlt} className="logo" />
           </div>
 
@@ -165,8 +187,9 @@ const CardNav = ({
             type="button"
             className="card-nav-cta-button"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+            onClick={() => { window.location.hash = "#resume"; }}
           >
-            Get Started
+            Resume
           </button>
         </div>
 
@@ -176,6 +199,14 @@ const CardNav = ({
               key={`${item.label}-${idx}`}
               className="nav-card"
               ref={setCardRef(idx)}
+              onClick={() => navigateToCard(item.label)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  navigateToCard(item.label);
+                }
+              }}
+              role="link"
+              tabIndex={0}
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
               <div className="nav-card-label">{item.label}</div>
@@ -184,8 +215,9 @@ const CardNav = ({
                   <a
                     key={`${lnk.label}-${i}`}
                     className="nav-card-link"
-                    href={lnk.href}
+                    href={lnk.href || `#${lnk.label.toLowerCase().replace(/\s+/g, "-")}`}
                     aria-label={lnk.ariaLabel}
+                    onClick={(event) => event.stopPropagation()}
                   >
                     <GoArrowUpRight
                       className="nav-card-link-icon"
